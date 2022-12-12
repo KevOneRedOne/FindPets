@@ -27,7 +27,6 @@
 Livraison 19/12/2022 :
 - Une Api Local
 - Mongoose DB
-- Figma
 - Page Login/Register
 - Page Home
 
@@ -35,3 +34,7 @@ Livraison 09/01/2023 :
 - Page Animal
 - Page Messagerie
 - Page Profil
+
+Bonus :
+- Figma
+- Wireframe
