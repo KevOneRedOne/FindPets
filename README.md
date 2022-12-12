@@ -5,9 +5,13 @@
     <h2 align="center">FindPets</h2>
 </div>
 
-<!-- <div> -->
-<!-- [![Product Name Screen Shot][product-screenshot]]("/Design/logo/FindPets.png") -->
-<!-- </div> -->
+
+<div align="center">
+    <a href="https://github.com/KevOneRedOne/FindPets">
+        <img src="/Design/OnePage/OnePage.png" alt="Logo">
+    </a>
+</div>
+
 
 ### Description
 
