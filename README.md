@@ -34,4 +34,3 @@ Livraison 09/01/2023 :
 - Page Animal
 - Page Messagerie
 - Page Profil
-- Page Paramètres
