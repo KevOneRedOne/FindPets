@@ -25,8 +25,7 @@
 
 ### Livrables :
 Livraison 19/12/2022 :
-- Une Api Local
-- Mongoose DB
+- Une Api Local : nodes.js + express + mongoDB
 - Page Login/Register
 - Page Home
 
