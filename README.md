@@ -13,10 +13,8 @@
 </div>
 
 
-### Description
-
-Pitch :
-- L'application destiné aux personnes qui souhaitent adopter un animal en passant par les refuges et les associations.
+### Description :
+- L'application est destiné aux personnes qui souhaitent adopter un animal en passant par les refuges et les associations.
 
 
 ### Fonctionnalités :
