@@ -26,6 +26,7 @@
 ### Livrables :
 Livraison 19/12/2022 :
 - Une Api Local
+- Mongoose DB
 - Figma
 - Page Login/Register
 - Page Home
