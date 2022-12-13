@@ -1,21 +1,22 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { StatusBar, SafeAreaView, TouchableOpacity, Text, Image, Button } from 'react-native';
 import styled from 'styled-components';
 
 const Home = ({navigation}) => {
     return (
         <StyledSafeAreaView>
-            <StyledLogo 
+            <StyledLogo
                 source={require('../../assets/logo/logoBlanc.png')}
             />
             <StyledTitle>FindPets</StyledTitle>
             <StyledTouchableOpacity title="Connexion"
             onPress={() => navigation.navigate('Login')}>
-                <StyledText>Connexion</StyledText>
+                <StyledText>CONNEXION</StyledText>
             </StyledTouchableOpacity>
             <StyledTouchableOpacity
             onPress={() => navigation.navigate('Register')}>
-                <StyledText>Inscription</StyledText>
+                <StyledText>INSCRIPTION</StyledText>
             </StyledTouchableOpacity>
             {/* Styled component doesn't support StatusBar */}
             <StatusBar barStyle="light-content" backgroundColor={'rgb(36,113,30)'} />
@@ -27,27 +28,29 @@ const Home = ({navigation}) => {
 //--------------Styled Components----------------
 const StyledSafeAreaView = styled.SafeAreaView`
     flex: 1;
+    width: 100%;
     align-items: center;
     justify-content: center;
     background-color: rgb(36,113,30);
 `;
 
 const StyledLogo = styled.Image`
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     margin-bottom: 20px;
 `;
 
 const StyledTitle = styled.Text`
     color: white;
-    font-size: 30px;
-    margin-bottom: 100px;
+    font-size: 35px;
+    margin-bottom: 200px;
 `;
 
 const StyledTouchableOpacity = styled.TouchableOpacity`
     color: white;
-    padding: 15px;
-    margin: 10px;
+    padding: 10px;
+    width: 50%;
+    margin: 20px;
     border-radius: 50px;
     border: 1px solid white;
 `;
@@ -55,7 +58,7 @@ const StyledTouchableOpacity = styled.TouchableOpacity`
 const StyledText = styled.Text`
     align-self: center;
     color: white;
-    font-size: 15px;
+    font-size: 17px;
 `;
 
 

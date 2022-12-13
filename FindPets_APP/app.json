@@ -1,4 +1,6 @@
 {
   "name": "FindPets_APP",
-  "displayName": "FindPets_APP"
+  "displayName": "FindPets",
+  "description": "FindPets",
+  "version": "1.0.0"
 }
