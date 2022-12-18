@@ -12,12 +12,14 @@ api.use(bodyParser.json());
 
 // Login Database
 mongoose.connect(
-    `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PWD}${process.env.MONGODB_CLUSTER}.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PWD}${process.env.MONGODB_CLUSTER}.mongodb.net/?retryWrites=true&w=majority`,
+    {dbName: process.env.MONGODB_DBNAME, useNewUrlParser: true, useUnifiedTopology: true}
   )
   .then(() => {
     console.log("You are successfully connected to database");
   })
   .catch((err) => console.log(err));
+
 mongoose.set('strictQuery', true);
 
 api.use("/api/findpets/v1", apiRouter);
