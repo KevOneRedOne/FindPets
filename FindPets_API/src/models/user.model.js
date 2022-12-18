@@ -20,16 +20,16 @@ const users = new mongoose.Schema(
         },
         email: {
             type: String,
-            required: true,
+            required: [true, 'Email is required'],
             trim: true,
-            unique: true,
+            unique: [true, 'Email already exists'],
             lowercase: true,
             minlength: 5,
             maxlength: 255
         },
         password: {
             type: String,
-            required: true,
+            required: [true, 'Password is required'],
             trim: true,
             minlength: 5,
             maxlength: 1024

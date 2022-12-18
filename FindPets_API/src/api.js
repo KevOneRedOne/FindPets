@@ -25,7 +25,10 @@ mongoose.set('strictQuery', true);
 api.use("/api/findpets/v1", apiRouter);
 
 // Method launch app
-api.listen(process.env.PORT, function () {
-    console.log("Server Up");
+api.listen(process.env.PORT, function (err) {
+  if (err) {
+    console.log(err);
+  } 
+  console.log("\n-------------------------------\nServer listening on PORT " + process.env.PORT + " !\n-------------------------------\n");
 });
   
