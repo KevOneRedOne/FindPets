@@ -5,7 +5,6 @@ const User = require("../models/user.model.js");
 // READ - User 
 exports.getUser = (req, res) => {
     // Find one by id
-    // User.findById(req.params.id)
     User.findById(req.userToken.id) 
     // callback
     .then((user) => {
