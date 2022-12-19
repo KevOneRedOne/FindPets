@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StatusBar} from 'react-native';
 import styled from 'styled-components';
 import axios from 'axios';
-import { AsyncStorage } from 'react-native';
+// import { AsyncStorage } from 'react-native';
 
 
 const Register = () => {
@@ -25,7 +25,7 @@ const Register = () => {
                 lastname: inputs.lastname,
                 email: inputs.email,
                 password: inputs.password,
-            }
+            },
         })
         .then(response => {
             console.log(response.data);

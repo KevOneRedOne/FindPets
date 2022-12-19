@@ -23,7 +23,7 @@ const Login = () => {
             data: {
                 email: inputs.email,
                 password: inputs.password,
-            }
+            },
         })
         .then(async response => {
             console.log(response.data);
