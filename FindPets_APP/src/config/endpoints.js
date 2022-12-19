@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from '../screens/login/login.js';
 import Register from '../screens/register/register.js';
-import Home from '../screens/home/home.js';
+import Load from '../screens/load/load.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,8 +12,8 @@ const Endpoints = () => {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen
-                    name="Home"
-                    component={Home}
+                    name="Load"
+                    component={Load}
                     options={{headerShown: false}} />
                 <Stack.Screen
                     name="Login"
@@ -22,7 +22,7 @@ const Endpoints = () => {
                 <Stack.Screen
                     name="Register"
                     component={Register}
-                    options={{title: 'Inscription'}} />
+                    options={{headerShown: false}} />
             </Stack.Navigator>
         </NavigationContainer>
     );

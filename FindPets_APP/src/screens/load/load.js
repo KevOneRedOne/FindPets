@@ -3,7 +3,7 @@ import React from 'react';
 import { StatusBar, SafeAreaView, TouchableOpacity, Text, Image, Button } from 'react-native';
 import styled from 'styled-components';
 
-const Home = ({navigation}) => {
+const Load = ({navigation}) => {
     return (
         <StyledSafeAreaView>
             <StyledLogo
@@ -49,7 +49,7 @@ const StyledTitle = styled.Text`
 const StyledTouchableOpacity = styled.TouchableOpacity`
     color: white;
     padding: 10px;
-    width: 50%;
+    width: 65%;
     margin: 20px;
     border-radius: 50px;
     border: 1px solid white;
@@ -62,4 +62,4 @@ const StyledText = styled.Text`
 `;
 
 
-export default Home;
+export default Load;
