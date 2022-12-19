@@ -2,8 +2,7 @@ import React from 'react';
 import { Text, View, StatusBar} from 'react-native';
 import styled from 'styled-components';
 import axios from 'axios';
-// import { AsyncStorage } from 'react-native';
-
+import { API_URL } from '@env';
 
 const Register = () => {
     const [inputs, setInputs] = React.useState({
@@ -12,10 +11,10 @@ const Register = () => {
         email: '',
         password: '',
     });
-    const handleRegister = () => {
+    const handleRegister = async () => {
         axios({
             method: 'post',
-            url: 'http://',
+            url: `${API_URL}/auth/register`,
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
@@ -27,14 +26,9 @@ const Register = () => {
                 password: inputs.password,
             },
         })
-        .then(response => {
+        .then(async response => {
             console.log(response.data);
-            console.log(response.headers['x-access-token']);
-            // AsyncStorage.setItem('token', response.headers['x-access-token']).then(() => {
-            //     console.log('token saved');
-            // }).catch((error) => {
-            //     console.log(error);
-            // });
+            console.log(response.data.message);
         })
         .catch(error => {
             console.log(error);

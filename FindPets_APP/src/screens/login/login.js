@@ -3,7 +3,7 @@ import { Text, View, StatusBar } from 'react-native';
 import styled from 'styled-components';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {API_URL} from '@env';
+import { API_URL } from '@env';
 
 const Login = () => {
     const [inputs, setInputs] = React.useState({
@@ -14,7 +14,6 @@ const Login = () => {
     const handleLogin = async () => {
         axios({
             method: 'post',
-            // url: 'http://10.0.2.2:3001/api/findpets/v1/auth/login',
             url: `${API_URL}/auth/login`,
             headers: {
                 'Content-Type': 'application/json',
@@ -28,7 +27,6 @@ const Login = () => {
         .then(async response => {
             console.log(response.data);
             console.log(response.data.token);
-            // console.log(response.headers['x-access-token']);
             await AsyncStorage.setItem('token', response.data.token).then(() => {
                 console.log(response.data.message);
                 console.log('Token saved in async storage');
@@ -43,7 +41,6 @@ const Login = () => {
     return (
         <View>
             <Text>Login</Text>
-            <Text>{API_URL}</Text>
             <TextInputContainer>
                 <TextInputStyled
                 value={inputs.email}

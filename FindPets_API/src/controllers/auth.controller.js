@@ -51,10 +51,36 @@ exports.register = (req, res) => {
     email: req.body.email,
     password: hashedPassword,
   });
+
+  if (!newUser.firstname) {
+    return res.status(400).send({
+      message: "Firstname cannot be empty",
+    });
+  }
+  if (!newUser.lastname) {
+    return res.status(400).send({
+      message: "Lastname cannot be empty",
+    });
+  }
+  if (!newUser.email) {
+    return res.status(400).send({
+      message: "Email cannot be empty",
+    });
+  }
+  if (!newUser.password) {
+    return res.status(400).send({
+      message: "Password cannot be empty",
+    });
+  } else {
+    newUser.password = hashedPassword;
+  }
   newUser
     .save()
     .then((data) => {
-      res.send(data);
+      res.send({
+        message: "User registered successfully",
+        data: data,
+      }); 
     })
     .catch((err) => {
       res.status(400).send(err);

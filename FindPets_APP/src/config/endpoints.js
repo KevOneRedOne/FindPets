@@ -18,7 +18,7 @@ const Endpoints = () => {
                 <Stack.Screen
                     name="Login"
                     component={Login}
-                    options={{title: 'Connexion'}} />
+                    options={{headerShown: false}} />
                 <Stack.Screen
                     name="Register"
                     component={Register}
