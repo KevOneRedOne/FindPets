@@ -116,8 +116,8 @@ const Animals = new mongoose.Schema(
         timestamps: true,
     },
     {
-        collection: 'Animals',
+        collection: 'animals',
     }
 );
 
-module.exports = mongoose.model('Animals', Animals, 'Animals');
+module.exports = mongoose.model('animals', Animals, 'animals');
