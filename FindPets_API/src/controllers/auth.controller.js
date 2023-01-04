@@ -32,6 +32,7 @@ exports.login = (req, res) => {
         message: "User connected",
         auth: true,
         token: userToken,
+        user_id: user._id,
       });
     })
     .catch((err) => {
