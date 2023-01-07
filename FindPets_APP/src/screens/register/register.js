@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 /* eslint-disable no-alert */
 import React, { useEffect } from 'react';
 import axios from 'axios';
