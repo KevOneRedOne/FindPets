@@ -55,7 +55,6 @@ const Register = ({navigation}) => {
                 },
             })
             .then(async response => {
-                console.log(response.data.message);
                 if (response.data.message === 'User registered successfully') {
                     alert('Inscription réussie !');
                     navigation.navigate('Login');

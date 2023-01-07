@@ -54,10 +54,9 @@ const Login = ({navigation}) => {
                 },
             })
             .then(async response => {
-                console.log('Response from the API', response.data);
+                console.log('Response from the API : ', response.data.message);
                 await AsyncStorage.setItem('token', response.data.token).then(() => {
                     AsyncStorage.setItem('user_id', response.data.user_id.toString()).then(() => {
-                        console.log(response.data.message);
                         console.log('Token and UserID saved in async storage');
                         navigation.navigate('Home');
                     }).catch((error) => {
