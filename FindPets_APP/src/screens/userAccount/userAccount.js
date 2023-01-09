@@ -4,7 +4,7 @@ import axios from 'axios';
 import {API_URL} from '@env';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import AvatarThumbnail from './../../components/avatarThumbnail/thumbnail';
-import {StyledViewContainer, StyledTextTitle, StyledViewDiv} from './../../assets/styles/userAccount.styles';
+import {StyledViewContainer, StyledTextTitle, StyledViewDiv, StyledSubTitle} from './../../assets/styles/userAccount.styles';
 
 const UserAccount = () => {
   const [user, setDataUser] = React.useState({});
@@ -46,7 +46,7 @@ const UserAccount = () => {
           <StyledTextTitle>{user.lastname} {user.firstname}</StyledTextTitle>
         </StyledViewDiv>
         <View>
-          <Text>A Propos : </Text>
+          <StyledSubTitle>A Propos : </StyledSubTitle>
         </View>
         <StyledViewDiv>
           <Text>Email : {user.email}</Text>
@@ -54,8 +54,20 @@ const UserAccount = () => {
           <Text>Tel : {user.phone ? user.phone : 'Pas de Téléphone de renseigner'}</Text>
         </StyledViewDiv>
         <View>
-          <Text>Description : </Text>
+          <StyledSubTitle>Description : </StyledSubTitle>
           <Text>{user.description ? user.description : 'Pas de Description'}</Text>
+          <Text/>
+        </View>
+        <View>
+          <StyledSubTitle>Animaux/Enfants : </StyledSubTitle>
+          <Text>Animaux : {user.pets ? user.pets : 0} chat</Text>
+          <Text>Enfants : {user.children ? user.children : 0} enfant</Text>
+          <Text/>
+        </View>
+        <View>
+        <StyledSubTitle>Maison/Appartement : </StyledSubTitle>
+          <Text>Appartement : {user.appartment ? user.appartment : "Pas d'appartement"}</Text>
+          <Text>Maison : {user.house ? user.house : 'Pas de maison'}</Text>
         </View>
       </StyledViewContainer>
     );

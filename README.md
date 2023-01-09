@@ -30,9 +30,11 @@ Livraison 19/12/2022 :
 - Page Home
 
 Livraison 09/01/2023 :
+- Page Profil
+
+Livraison 25/01/2023 :
 - Page Animal
 - Page Messagerie
-- Page Profil
 
 Bonus :
 - Figma

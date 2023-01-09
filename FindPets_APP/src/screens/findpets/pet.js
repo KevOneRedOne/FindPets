@@ -1,8 +1,12 @@
+// import axios from 'axios';
 import React from 'react';
 import { View, Text } from 'react-native';
 
 const Pet = (pet) => {
     // console.log('Le contenu de data : ', data.data[0].name); // data[0].name is undefined);
+    // axios({
+
+    // })
 
     return (
         <View style={{ marginTop: 100, justifyContent: 'center', alignItems: 'center' }}>

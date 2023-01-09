@@ -27,4 +27,12 @@ const StyledTextTitle = styled.Text`
     color: #000;
 `;
 
-export { StyledViewContainer, StyledTextTitle, StyledViewDiv };
+const StyledSubTitle = styled.Text`
+    font-size: 16px;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: orange;
+`;
+
+export { StyledViewContainer, StyledTextTitle, StyledViewDiv, StyledSubTitle };
