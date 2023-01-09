@@ -37,6 +37,7 @@ Livraison 09/01/2023 :
 Bonus :
 - Figma
 - Wireframe
+- Api Local
 
 ### Lancez l'application :
 - Dans un terminal, se placer dans le dossier FindPets
