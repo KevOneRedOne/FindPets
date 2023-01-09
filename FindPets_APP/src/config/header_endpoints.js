@@ -33,10 +33,20 @@ const Endpoints = () => {
                 <Stack.Screen
                     name="Paramètres"
                     component={Settings}
+                    options={{
+                        headerTitleStyle:{fontSize: 20, fontFamily: 'Roboto', fontWeight: 'bold', letterSpacing: 1.5},
+                        headerTintColor:'rgb(36,113,30)',
+                        headerStyle:{borderBottomColor:'rgb(36,113,30)', borderBottomWidth:1},
+                    }}
                 />
                 <Stack.Screen
                     name="Mon compte"
                     component={UserAccount}
+                    options={{
+                        headerTitleStyle:{fontSize: 20, fontFamily: 'Roboto', fontWeight: 'bold', letterSpacing: 1.5},
+                        headerTintColor:'rgb(36,113,30)',
+                        headerStyle:{borderBottomColor:'rgb(36,113,30)', borderBottomWidth:1},
+                    }}
                 />
             </Stack.Navigator>
         </NavigationContainer>

@@ -13,10 +13,9 @@ const BottomEndpoints = () => {
       initialRouteName="FindPets"
       screenOptions={
         ({route}) => ({
-          tabBarInactiveTintColor: 'gray',
           tabBarActiveTintColor: 'rgb(36,113,30)',
-          tabBarLabelStyle: {fontSize: 12},
-          tabBarStyle: {height: 50},
+          tabBarLabelStyle: {fontSize: 12,fontFamily: 'Roboto'},
+          tabBarStyle: {height: 50, borderTopColor: 'rgb(36,113,30)', borderTopWidth: 1},
           tabBarIcon: ({focused, color, size, iconName}) => {
             if (route.name === 'FindPets') {
               iconName = focused ? 'paw-outline' : 'paw-outline';
@@ -31,9 +30,25 @@ const BottomEndpoints = () => {
       }
       shifting={true}
     >
-      <BottomStack.Screen name="Menu" component={Menu}/>
-      <BottomStack.Screen name="FindPets" component={FindPets}/>
-      <BottomStack.Screen name="Chat" component={Chat} options={{tabBarBadge: 3}}/>
+      <BottomStack.Screen name="Menu" component={Menu} options={{
+          headerTitleStyle:{fontSize: 20, fontFamily: 'Roboto', fontWeight: 'bold',letterSpacing: 1.5},
+          headerTintColor:'rgb(36,113,30)',
+          headerStyle:{borderBottomColor:'rgb(36,113,30)', borderBottomWidth:1},
+        }}
+      />
+      <BottomStack.Screen name="FindPets" component={FindPets} options={{
+          headerTitleStyle:{fontSize: 20, fontFamily: 'Roboto', fontWeight: 'bold',letterSpacing: 1.5},
+          headerTintColor:'rgb(36,113,30)',
+          headerStyle:{borderBottomColor:'rgb(36,113,30)', borderBottomWidth:1},
+        }}
+      />
+      <BottomStack.Screen name="Chat" component={Chat} options={{
+          headerTitleStyle:{fontSize: 20, fontFamily: 'Roboto', fontWeight: 'bold',letterSpacing: 1.5},
+          headerTintColor:'rgb(36,113,30)',
+          headerStyle:{borderBottomColor:'rgb(36,113,30)', borderBottomWidth:1},
+          tabBarBadge: 3,
+        }}
+      />
     </BottomStack.Navigator>
   );
 };

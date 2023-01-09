@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { StyledSafeAreaView, StyledTitle } from '../../assets/styles/load.styles';
-import Button from '../../components/Button_Login/button';
+import Button from '../../components/Buttons/buttonlogin';
 import Logo from '../../components/Logo/logo';
 
 const Load = ({navigation}) => {

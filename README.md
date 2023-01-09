@@ -37,3 +37,26 @@ Livraison 09/01/2023 :
 Bonus :
 - Figma
 - Wireframe
+
+### Lancez l'application :
+- Dans un terminal, se placer dans le dossier FindPets
+- Installer et lancer l'Api Local :
+```sh
+cd FindPets/FindPets_API
+```
+```sh
+npm install
+```
+```sh
+npm run dev
+```
+- Installer et lancer l'application :
+```sh
+cd FindPets/FindPets_APP
+```
+```sh
+npm install
+```
+```sh
+npm run android
+```

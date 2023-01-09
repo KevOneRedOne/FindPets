@@ -6,7 +6,7 @@ import { View, StatusBar, TouchableOpacity} from 'react-native';
 import { ContainerStyled, TextTitleStyled, BarStyle, ContainerBisStyled, TextStyled, TextLinkStyled } from '../../assets/styles/register.styles';
 import { API_URL } from '@env';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Button from '../../components/Button_Login/button';
+import Button from '../../components/Buttons/buttonlogin';
 import TextInputCustom from '../../components/Text_Input/textInputCustom';
 
 const Register = ({navigation}) => {

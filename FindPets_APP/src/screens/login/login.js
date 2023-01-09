@@ -6,7 +6,7 @@ import { ContainerStyled, TextTitleStyled, BarStyle, ContainerBisStyled, TextSty
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { API_URL } from '@env';
-import Button from '../../components/Button_Login/button';
+import Button from '../../components/Buttons/buttonlogin';
 import TextInputCustom from '../../components/Text_Input/textInputCustom';
 
 
