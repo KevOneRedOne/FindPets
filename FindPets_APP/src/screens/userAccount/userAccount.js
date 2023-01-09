@@ -4,6 +4,7 @@ import axios from 'axios';
 import {API_URL} from '@env';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import AvatarThumbnail from './../../components/avatarThumbnail/thumbnail';
+import {StyledViewContainer, StyledTextTitle, StyledViewDiv} from './../../assets/styles/userAccount.styles';
 
 const UserAccount = () => {
   const [user, setDataUser] = React.useState({});
@@ -39,13 +40,24 @@ const UserAccount = () => {
     );
   } else {
     return (
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <AvatarThumbnail />
-        <Text>{user.email}</Text>
-        <Text>{user.username ? user.username : 'Pas de Surnom'}</Text>
-        <Text>{user.firstname}</Text>
-        <Text>{user.lastname}</Text>
-      </View>
+      <StyledViewContainer>
+        <StyledViewDiv>
+          <AvatarThumbnail />
+          <StyledTextTitle>{user.lastname} {user.firstname}</StyledTextTitle>
+        </StyledViewDiv>
+        <View>
+          <Text>A Propos : </Text>
+        </View>
+        <StyledViewDiv>
+          <Text>Email : {user.email}</Text>
+          <Text>Adresse : {user.address ? user.address : "Pas d'adresse de rensigner"}</Text>
+          <Text>Tel : {user.phone ? user.phone : 'Pas de Téléphone de renseigner'}</Text>
+        </StyledViewDiv>
+        <View>
+          <Text>Description : </Text>
+          <Text>{user.description ? user.description : 'Pas de Description'}</Text>
+        </View>
+      </StyledViewContainer>
     );
   }
 };

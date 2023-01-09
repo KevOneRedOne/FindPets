@@ -6,7 +6,7 @@ import {API_URL} from '@env';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Swipe from '../../components/Swipe/swipe';
 
-const FindPets = () => {
+const FindPets = (navigation) => {
   const [animalsList, setAnimalsList] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
 

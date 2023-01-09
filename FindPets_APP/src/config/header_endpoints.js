@@ -7,6 +7,7 @@ import Load from '../screens/load/load.js';
 import Home from '../screens/home/home.js';
 import Settings from '../screens/settings/settings.js';
 import UserAccount from '../screens/userAccount/userAccount.js';
+import Pet from '../screens/findpets/pet.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +48,10 @@ const Endpoints = () => {
                         headerTintColor:'rgb(36,113,30)',
                         headerStyle:{borderBottomColor:'rgb(36,113,30)', borderBottomWidth:1},
                     }}
+                />
+                <Stack.Screen
+                    name="Pet"
+                    component={Pet}
                 />
             </Stack.Navigator>
         </NavigationContainer>

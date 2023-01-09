@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const Pet = (petId) => {
+const Pet = (pet) => {
     // console.log('Le contenu de data : ', data.data[0].name); // data[0].name is undefined);
 
     return (
