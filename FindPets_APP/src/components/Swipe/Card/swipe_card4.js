@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyledViewContainer, StyledViewDiv, StyledImage, StyledDiv, StyledTextTitle } from '../../assets/styles/swipe_card.styles';
+import { StyledViewContainer, StyledViewDiv, StyledImage, StyledTextTitle, StyledDiv } from './../../../assets/styles/swipe_card.styles';
 import { Text } from 'react-native';
 
 const SwipeCard1 = (props) => {
     return (
         <StyledViewContainer>
-            <StyledImage source={require('./../../assets/images/chat.jpg')} />
+            <StyledImage source={require('./../../../assets/images/chat.jpg')} />
             <StyledViewDiv>
                 <StyledDiv>
                     <StyledTextTitle>{props.props.name} , {props.props.age} ans</StyledTextTitle>

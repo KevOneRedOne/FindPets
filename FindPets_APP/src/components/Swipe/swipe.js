@@ -1,19 +1,27 @@
 import React from 'react';
 import { View, Text} from 'react-native';
 import { StyledViewContainer, StyledTouchableOpacity, StyledImage } from '../../assets/styles/swipe.styles';
+import { useNavigation } from '@react-navigation/native';
 import CardStack, { Card } from 'react-native-card-stack-swiper';
-import SwipeCard1 from '../Card/swipe_card1';
-import SwipeCard2 from '../Card/swipe_card2';
-import SwipeCard3 from '../Card/swipe_card3';
-import SwipeCard4 from '../Card/swipe_card4';
-import SwipeCard5 from '../Card/swipe_card5';
+import SwipeCard1 from './Card/swipe_card1';
+import SwipeCard2 from './Card/swipe_card2';
+import SwipeCard3 from './Card/swipe_card3';
+import SwipeCard4 from './Card/swipe_card4';
+import SwipeCard5 from './Card/swipe_card5';
 
 const Swipe = (animals) => {
+    console.log('Le contenu de data : ', animals.data[0]._id); // data[0].name is undefined);
+
+    const navigation = useNavigation();
+
+    const goToPet = (animalID) => {
+        navigation.navigate('Pet', {id: animalID});
+    };
+
     return (
         <View>
-            <CardStack
-                renderNoMoreCards={() => <Text />}
-                disableBottomSwipe={true} loop={true}
+            <CardStack renderNoMoreCards={() => <Text />}
+                loop={true}
                 ref={swiper => {this.swiper = swiper;}}
             >
                 <Card><SwipeCard1 props={animals.data[0]}/></Card>
@@ -29,7 +37,7 @@ const Swipe = (animals) => {
                     </StyledTouchableOpacity>
                 </View>
                 <View>
-                    <StyledTouchableOpacity onPress={ () => { this.swiper.swipeTop();}}>
+                    <StyledTouchableOpacity onPress={() => { this.swiper.swipeTop();}}>
                         <StyledImage source={require('./../../assets/images/icons/etoile.png')}/>
                     </StyledTouchableOpacity>
                 </View>
